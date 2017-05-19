@@ -1060,7 +1060,7 @@ function Beautifier(js_source_text, options) {
         var empty_braces = last_type === 'TK_START_BLOCK';
 
         if (flags.inline_frame && !empty_braces) { // try inline_frame (only set if opt.braces-preserve-inline) first
-            output.space_before_token = true;
+            // output.space_before_token = true;
         } else if (opt.brace_style === "expand") {
             if (!empty_braces) {
                 print_newline();
@@ -1226,7 +1226,8 @@ function Beautifier(js_source_text, options) {
             prefix = 'SPACE';
         } else if (last_type === 'TK_START_BLOCK') {
             if (flags.inline_frame) {
-                prefix = 'SPACE';
+                // prefix = 'SPACE';
+                // prefix = 'SPACE';
             } else {
                 prefix = 'NEWLINE';
             }
